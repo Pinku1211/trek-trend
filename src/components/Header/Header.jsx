@@ -14,10 +14,10 @@ const Header = ({ onPlaceChanged, onLoad }) => {
         <Typography variant="h5" className={classes.title}>
           TrekTrend
         </Typography>
-        <Box display='flex'>
-          {/* <Typography variant="h6" className={classes.title}>
+        <Box style={{ display: 'flex', alignItems: 'center'}}>
+          <Typography variant="h7" style={{marginRight: '12px'}} className={classes.title}>
             Explore new places
-          </Typography> */}
+          </Typography>
           {/* <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}> */}
             <div className={classes.search}>
               <div className={classes.searchIcon}>

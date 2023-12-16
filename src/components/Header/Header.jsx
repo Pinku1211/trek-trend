@@ -9,7 +9,7 @@ const Header = ({ onPlaceChanged, onLoad }) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar style={{position: "static"}}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h5" className={classes.title}>
           TrekTrend

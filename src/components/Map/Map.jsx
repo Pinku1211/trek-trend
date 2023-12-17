@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 
-import mapStyles from '../../mapStyles';
+import mapStyles from './mapStyles';
 import useStyles from './styles';
 
 
@@ -15,19 +15,19 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
 
 
   return (
-    <div className={classes.mapContainer}>
+    <div className={classes.mapContainer} style={{paddingTop: '100px'}}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyAIZuqVUU42LmPAnpl-IVOn_O-pUzgQUws' }}
+        bootstrapURLKeys={{ key: 'AIzaSyA32M9BcP9mwje4-NEVddyP5cDr0AMe1tg' }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
-        options={''}
+        options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
         onChange={(e) => {
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
           setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })
         }}
-        onChildClick={(child) => { }}
+        // onChildClick={(child) => { }}
       >
         {places?.map((place, i) => (
           <div

@@ -8,7 +8,7 @@ const List = ({ places, type, setType, rating, setRating, isLoading }) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} style={{paddingTop: '100px'}}>
             <Typography variant='h4'>
                 Restaurants, Hotels & Attractions around you
             </Typography>

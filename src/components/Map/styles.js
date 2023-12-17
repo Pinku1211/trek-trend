@@ -5,10 +5,10 @@ export default makeStyles(() => ({
     padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
   },
   mapContainer: {
-    height: '75vh', width: '100%', paddingTop: '30px',
+    height: '75vh', width: '100%', padding: '30px',
   },
   markerContainer: {
-     zIndex: 10, '&:hover': { zIndex: 2 },
+    position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },
   },
   pointer: {
     cursor: 'pointer',
